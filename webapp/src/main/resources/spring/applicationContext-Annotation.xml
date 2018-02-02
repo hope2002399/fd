@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	default-lazy-init="true">
+	   <description>Spring 注解配置</description>
+	   
+	   <bean id="tagTypeServiceCacheBean" class="com.iris.egrant.formdesign.service.template.TagTypeServiceCacheBean">
+	   			<property name="cacheMap">
+	   					<map>
+	   							<entry key="text" value="textTagTypeService" /> <!--  tagtype为text类型  处理类的beanId映射 -->
+	   						  <entry key="textarea" value="textareaTagTypeService" />
+	   						  <entry key="span" value="spanTagTypeService" />
+	   						  <entry key="radio" value="radioTagTypeService" />
+	   						  <entry key="checkbox" value="checkboxTagTypeService" /> 
+	   						  <entry key="datepick" value="datepickTagTypeService" /> 
+	   						  <entry key="select" value="selectTagTypeService" /> 
+	   					</map>
+	   			</property>
+	   </bean>
+	   
+	   <context:component-scan base-package="com.iris.egrant.formdesign.service" scoped-proxy="interfaces"  />
+	   <context:component-scan base-package="com.iris.egrant.formdesign.dao" scoped-proxy="targetClass"  />
+	   
+	   <context:component-scan base-package="com.iris.egrant.formdemo.service" scoped-proxy="interfaces"  />
+	   <context:component-scan base-package="com.iris.egrant.formdemo.dao" scoped-proxy="targetClass"  />
+	   
+	 	
+</beans>
