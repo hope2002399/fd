@@ -1,0 +1,22 @@
+.metadata/*
+publication/*
+RemoteSystemsTempFiles/*
+.externalToolBuilders/
+pdf/*.pdf
+app/*.pdf
+Servers/*
+·þÎñÆ÷/*
+Servers2/*
+pdfbin/*
+target/
+.settings/
+*.MF
+*.class
+*.log
+*.project
+*.bak
+*.classpath
+# Package Files #
+*.jar
+*.war
+*.ear
