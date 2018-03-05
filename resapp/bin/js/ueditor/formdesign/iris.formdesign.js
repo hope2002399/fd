@@ -11,6 +11,9 @@
 
 UE.formDesignUrlNamespace = 'formdesign';
 
+/**
+ * 标题
+ */
 UE.plugins['title'] = function(){
 	var me = this ;
 	var thePlugins = "title" ;
@@ -21,6 +24,9 @@ UE.plugins['title'] = function(){
 	}
 }
 
+/**
+ * 必填项提示
+ */
 UE.plugins['required_note'] = function(){
 	var me = this ;
 	var thePlugins = "required_note" ;
